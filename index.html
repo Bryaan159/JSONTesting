@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de JSON</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        .code-container {
+            position: relative;
+        }
+
+        .code-container button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: -76px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        #generateBtn {
+            background-color: #008CBA;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contador"></div>
+    <label for="tipoDocumento">Tipo de Documento:</label>
+    <select id="tipoDocumento">
+        <option value="DTE-11">DTE-11</option>
+        <option value="DTE-01">DTE-01</option>
+        <option value="DTE-03">DTE-03</option>
+        <option value="DTE-05">DTE-05</option>
+        <option value="DTE-06">DTE-06</option>
+        
+        
+    </select>
+    <button id="generateBtn">GENERAR JSON</button>
+    <div class="code-container">
+        <pre id="jsonOutput"></pre>
+        <button class="btn" id="copyBtn" data-clipboard-target="#jsonOutput">Copiar Código</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+</body>
+
+</html>
